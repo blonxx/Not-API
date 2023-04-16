@@ -23,7 +23,7 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
+  process.env.ADMIN_CORS || "https://643c2b52eacdf578b20f6022--sprightly-pony-1c3265.netlify.app";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
@@ -48,15 +48,6 @@ const plugins = [
     options: {
       api_key: process.env.STRIPE_API_KEY,
       webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
-    },
-  },
-  {
-    resolve: `medusa-payment-paypal`,
-    options: {
-      sandbox: process.env.PAYPAL_SANDBOX,
-      client_id: process.env.PAYPAL_CLIENT_ID,
-      client_secret: process.env.PAYPAL_CLIENT_SECRET,
-      auth_webhook_id: process.env.PAYPAL_AUTH_WEBHOOK_ID,
     },
   },
 ];
