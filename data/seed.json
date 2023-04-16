@@ -3,10 +3,7 @@
     "currencies": ["eur", "usd"]
   },
   "users": [
-    {
-      "email": "admin@medusa-test.com",
-      "password": "supersecret"
-    }
+ 
   ],
   "regions": [
     {
