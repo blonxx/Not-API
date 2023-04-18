@@ -23,10 +23,10 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "https://643c2b52eacdf578b20f6022--sprightly-pony-1c3265.netlify.app";
+  process.env.ADMIN_CORS || "https://sage-smakager-994c22.netlify.app/";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || "https://front.theprojectnot.com/";
 
 const DATABASE_TYPE = process.env.DATABASE_TYPE || "sqlite";
 const DATABASE_URL = process.env.DATABASE_URL || "postgres://localhost/medusa-store";
