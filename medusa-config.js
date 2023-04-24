@@ -60,12 +60,15 @@ const plugins = [
     },
   },
   {
-    resolve: `medusa-file-minio`,
+    resolve: `medusa-file-s3`,
     options: {
-        endpoint: process.env.MINIO_ENDPOINT,
-        bucket: process.env.MINIO_BUCKET,
-        access_key_id: process.env.MINIO_ACCESS_KEY,
-        secret_access_key: process.env.MINIO_SECRET_KEY,
+        s3_url: process.env.S3_URL,
+        bucket: process.env.S3_BUCKET,
+        aws_config_object: {
+          region: process.env.S3_REGION,
+          access_key_id: process.env.S3_ACCESS_KEY_ID,
+          secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+        },
     },
   },
 ];
